@@ -14,13 +14,9 @@ export default function Header() {
   return (
     <div style={navLinks}>
       <p>
-        {" "}
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/aboutus">
-          {" "}
-          About Us | <Link to="/careers">Careers</Link> |{" "}
-        </Link>{" "}
-        <Link to="/beer">On Tap</Link> <hr style={hrStyle} />
+        <Link to="/">Home</Link> |<Link to="/kegs">On Tap</Link> |
+        <Link to="/aboutus">About Us</Link> |<Link to="/careers">Careers</Link>
+        <hr style={hrStyle} />
       </p>
     </div>
   );
