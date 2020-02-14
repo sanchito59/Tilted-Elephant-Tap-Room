@@ -12,19 +12,21 @@ export default function Header() {
     backgroundColor: "rgba(170,204,204, 0.6)"
   };
 
-  const brandIcons = {};
-
   const kegIconStyle = {
     marginBottom: "15px"
   };
 
+  const tapRoomNameHeader = {
+    fontFamily: "Montserrat Subrayada"
+  };
+
   return (
     <div style={navLinks}>
-      <div style={brandIcons}>
+      <div>
         <img style={kegIconStyle} src={kegIcon} alt="elephant icon" />
         <img src={elephantIcon} alt="elephant icon" />
       </div>
-      <h1>Tilted Elephant Tap Room</h1>
+      <h1 style={tapRoomNameHeader}>Tilted Elephant Tap Room</h1>
       <NavLinks />
     </div>
   );
