@@ -14,6 +14,15 @@ export default function KegList() {
         "This beer erupts with a floral, hoppy taste, followed by a well rounded malty middle, finishing with a nicely organic hop flavor."
     },
     {
+      name: "Montucky Cold Snack",
+      brand: "Montucky Cold Snacks",
+      price: "2.79",
+      alcoholContent: "4.1",
+      IBU: "n/a",
+      description:
+        "Refreshing light beer for pow pow rippers, pony riders, gator wranglers, and badass do-gooders."
+    },
+    {
       name: "Ruby",
       brand: "McMenamins",
       price: "4.50",
@@ -21,6 +30,15 @@ export default function KegList() {
       IBU: "5",
       description:
         "An ale that's light, crisp and refreshingly fruity. Great Western Premium 2-Row and 42 pounds of Oregon-grown raspberry puree is used to craft every colorful batch."
+    },
+    {
+      name: "Oatmeal Stout",
+      brand: "Oakshire",
+      price: "6.00",
+      alcoholContent: "6.5",
+      IBU: "40",
+      description:
+        "A dark beer brewed with oatmeal to give a slightly nutty flavor, with finishing notes of dark chocolate and espresso beans."
     },
     {
       name: "Blue Ribbon",
