@@ -24,6 +24,7 @@ export default function Header() {
         <img style={kegIconStyle} src={kegIcon} alt="elephant icon" />
         <img src={elephantIcon} alt="elephant icon" />
       </div>
+      <h1>Tilted Elephant Tap Room</h1>
       <NavLinks />
     </div>
   );
