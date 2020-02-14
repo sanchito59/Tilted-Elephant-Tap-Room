@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tilted Elephant Tap Room
 
-## Available Scripts
+## By **Chris Sanchez**
 
-In the project directory, you can run:
+**Tilted Elephant Tap Room** is a... 
 
-### `npm start`
+![screenshot of age restricted landing page](public/ageRestriction.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![screenshot of tap list](public/tapList.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ - - -
 
-### `npm test`
+### Setup/Installation Requirements
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image of Github repository file system](https://i.imgur.com/UStodOA.jpg "read")
 
-### `npm run build`
+#### Zip:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Click [here](https://github.com/sanchito59/Tilted-Elephant-Tap-Room.git) to go to the repository location where you will find the clone/download menu.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+ 2. Navigate to the directory (folder) that contains your browser's downloads.
+ 3. Double-click on **Tilted Elephant Tap Room** directory (folder).
+ 4. Open directory contents by extracting/unzipping documents from folder.
+ 3. Make sure your system has `Node Package Manger (NPM)` installed.
+ 4. With `NPM` installed, run `npm install` .
+ 5. After the app files have been installed/configured, run `npm start` . This will start the launch **Tilted Elephant Tap Room** in `localhost:3000` .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Clone:
 
-### `npm run eject`
+ 1. To clone the repository, from your terminal or command line enter: "git clone https://github.com/sanchito59/Tilted-Elephant-Tap-Room.git"
+ 2. Once the repository finishes downloading you will need to navigate to it in the terminal/command line.
+ 3. Make sure your system has `Node Package Manger (NPM)` installed.
+ 4. With `NPM` installed, run `npm install` .
+ 5. After the app files have been installed/configured, run `npm start` . This will start the launch **Tilted Elephant Tap Room** in `localhost:3000` .
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - - -
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- ### Specifications: -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- |Behavior|Input|Output|
+|---|---|---|
+|(Read/GET)|User is on the homepage.|Homepage displays featured products and navigation to view all products.|
+|(Create/POST) User adds a product to the catalogue of products.|'Vasiva HVAC Comp'|The corresponding pages now have the product added and so does the database. The user is shown a message to inform them of the successful creation.|
+|(Read/GET)|User is on the product page.|Product page displays a list of all products. Included is the ability to create products.|
+|(Update/PATCH) User changes the product.|'Fire System Alarms'|All pages reflect the changes and so does the database.|
+|(Create/POST) User adds a review to the product.|Reviews contain information such as author, review text, and rating.|The product page now has the review added and so does the database. The user is shown a message to inform them of successfully changes.|
+|(Update/PATCH) User changes the review's author.|'Michael Smith'|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
+|(Delete/DELETE) The user removes a review from a product.|Review for 'Fire System Alarms' is deleted.|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
+|(Delete/DELETE) The user deletes a product.|'Fire System Alarms'|The database and all corresponding pages no longer have the product.| -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ <!-- - - - -->
 
-## Learn More
+### Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - React
+ - JSX
+ - JavaScript ES6
+ - HTML5 / CSS3
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ - - -
 
-### Code Splitting
+### Support and Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+If you run into any issues running **Tilted Elephant Tap Room**, please contact **Chris Sanchez**.
 
-### Analyzing the Bundle Size
+### License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Making a Progressive Web App
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-### Advanced Configuration
+Copyright (c) 2020 **Chris Sanchez**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

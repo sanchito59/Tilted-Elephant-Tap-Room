@@ -50,7 +50,9 @@ export default function AboutUs() {
     backgroundAttachment: "fixed"
   };
 
-  const employeesDiv = {};
+  const employeesDiv = {
+    marginBottom: "5%"
+  };
 
   const crewHeader = {
     color: "white",

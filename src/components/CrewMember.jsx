@@ -13,6 +13,7 @@ export default function CrewMember(props) {
     height: "30vh",
     float: "left",
     paddingRight: "5%",
+    marginRight: "32px",
     border: "1px solid red"
   };
 
