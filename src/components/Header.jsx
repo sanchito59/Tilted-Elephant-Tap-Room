@@ -1,23 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import NavLinks from "./NavLinks";
+
+import elephantIcon from "./../images/elephant.png";
+import kegIcon from "./../images/keg.png";
 
 export default function Header() {
   const navLinks = {
     textAlign: "center",
-    paddingTop: "3%"
+    paddingTop: "3%",
+    backgroundColor: "rgba(170,204,204, 0.6)"
   };
 
-  const hrStyle = {
-    marginTop: "5%"
+  const brandIcons = {};
+
+  const kegIconStyle = {
+    marginBottom: "15px"
   };
 
   return (
     <div style={navLinks}>
-      <p>
-        <Link to="/">Home</Link> |<Link to="/kegs">On Tap</Link> |
-        <Link to="/aboutus">About Us</Link> |<Link to="/careers">Careers</Link>
-        <hr style={hrStyle} />
-      </p>
+      <div style={brandIcons}>
+        <img style={kegIconStyle} src={kegIcon} alt="elephant icon" />
+        <img src={elephantIcon} alt="elephant icon" />
+      </div>
+      <NavLinks />
     </div>
   );
 }

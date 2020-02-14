@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 export default function Keg(props) {
   const keg = {
-    padding: "16px"
+    padding: "16px",
+    backgroundColor: "rgba(51, 68, 85, 0.6)"
   };
 
   const brand = {
