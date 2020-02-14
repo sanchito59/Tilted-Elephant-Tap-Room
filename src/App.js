@@ -8,7 +8,6 @@ import NewKegForm from './components/NewKegForm';
 import AboutUs from './components/AboutUs';
 import Careers from './components/Careers';
 import KegList from './components/KegList';
-import Counters from './components/Counters';
 
 function App() {
   return (

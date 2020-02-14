@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Counters from "./Counters";
+
 export default function Keg(props) {
   const keg = {
     padding: "16px",
@@ -40,6 +42,7 @@ export default function Keg(props) {
         <span style={bold}>IBU: </span> {props.IBU}
       </p>
       <p style={description}>{props.description}</p>
+      <Counters />
       <hr style={hr}></hr>
     </div>
   );
