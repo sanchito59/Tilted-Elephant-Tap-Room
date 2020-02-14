@@ -21,6 +21,15 @@ export default function KegList() {
       IBU: "5",
       description:
         "An ale that's light, crisp and refreshingly fruity. Great Western Premium 2-Row and 42 pounds of Oregon-grown raspberry puree is used to craft every colorful batch."
+    },
+    {
+      name: "Blue Ribbon",
+      brand: "Pabst",
+      price: "3.00",
+      alcoholContent: "4.6",
+      IBU: "10",
+      description:
+        "Sticky dive bars and ragers can attest- the cool, refreshing taste of a Pabst Blue Ribbon is seldom matched."
     }
   ];
   return (
@@ -34,6 +43,7 @@ export default function KegList() {
           alcoholContent={keg.alcoholContent}
           IBU={keg.IBU}
           description={keg.description}
+          key={index}
         />
       ))}
     </div>
