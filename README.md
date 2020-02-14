@@ -23,7 +23,7 @@
  4. Open directory contents by extracting/unzipping documents from folder.
  3. Make sure your system has `Node Package Manger (NPM)` installed.
  4. With `NPM` installed, run `npm install` .
- 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** in `localhost:3000` .
+ 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** on `localhost:3000` in your default browser.
 
 #### Clone:
 
@@ -31,7 +31,7 @@
  2. Once the repository finishes downloading you will need to navigate to it in the terminal/command line.
  3. Make sure your system has `Node Package Manger (NPM)` installed.
  4. With `NPM` installed, run `npm install` .
- 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** in `localhost:3000` .
+ 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** on `localhost:3000` in your default browser.
 
  - - -
 
