@@ -14,6 +14,7 @@ import Careers from './components/Careers';
 import KegList from './components/KegList';
 import AgeRestriction from './components/AgeRestriction';
 import UnderagePage from './components/Underage';
+import Error404 from './components/Error404';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path='/newkeg' component={NewKegForm} />
         <Route exact path='/careers' component={Careers} />
         <Route exact path='/aboutus' component={AboutUs} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
