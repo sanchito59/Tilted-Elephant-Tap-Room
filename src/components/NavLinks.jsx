@@ -12,7 +12,7 @@ export default function NavLinks() {
   };
   return (
     <p style={zeroMargin}>
-      <Link to="/">Home</Link> |<Link to="/kegs">On Tap</Link> |
+      <Link to="/home">Home</Link> |<Link to="/kegs">On Tap</Link> |
       <Link to="/newkeg">New Keg </Link>|<Link to="/aboutus">About Us</Link> |
       <Link to="/careers">Careers</Link>
       <hr style={hrStyle} />

@@ -40,11 +40,15 @@ export default function AboutUs() {
     backgroundAttachment: "fixed"
   };
 
+  const textCenter = {
+    textAlign: "center"
+  };
+
   return (
     <div style={aboutUsPage}>
       <Header />
       <div>
-        <h1>Our Crew</h1>
+        <h1 style={textCenter}>Our Crew</h1>
         {employees.map((employee, index) => (
           <CrewMember
             title={employee.title}
