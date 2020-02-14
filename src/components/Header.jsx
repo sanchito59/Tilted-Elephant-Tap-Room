@@ -9,11 +9,7 @@ export default function Header() {
   const navLinks = {
     textAlign: "center",
     paddingTop: "3%",
-    backgroundColor: "rgba(170,204,204, 0.6)"
-  };
-
-  const kegIconStyle = {
-    marginBottom: "15px"
+    backgroundColor: "rgb(204,224,224)"
   };
 
   const tapRoomNameHeader = {
@@ -23,7 +19,7 @@ export default function Header() {
   return (
     <div style={navLinks}>
       <div>
-        <img style={kegIconStyle} src={kegIcon} alt="elephant icon" />
+        <img src={kegIcon} alt="elephant icon" />
         <img src={elephantIcon} alt="elephant icon" />
       </div>
       <h1 style={tapRoomNameHeader}>Tilted Elephant Tap Room</h1>

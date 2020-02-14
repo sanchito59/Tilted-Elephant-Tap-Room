@@ -6,8 +6,10 @@ import Counters from "./Counters";
 export default function Keg(props) {
   const keg = {
     padding: "16px",
-    backgroundColor: "rgba(51, 68, 85, 0.6)",
-    color: "rgb(255, 255, 245)"
+    backgroundColor: "rgba(51, 68, 85, 0.9)",
+    color: "rgb(255, 255, 245)",
+    margin: "20px",
+    borderRadius: "8px"
   };
 
   const brand = {
@@ -24,7 +26,8 @@ export default function Keg(props) {
 
   const hr = {
     marginTop: "12px",
-    width: "75%"
+    width: "75%",
+    borderColor: "rgb(255, 255, 255)"
   };
 
   return (
