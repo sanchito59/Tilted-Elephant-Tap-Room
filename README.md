@@ -10,7 +10,7 @@
 
 ![screenshot of tap list](public/tapList.png)
 
- - -  -
+ - - -
 
 ### Setup/Installation Requirements
 
