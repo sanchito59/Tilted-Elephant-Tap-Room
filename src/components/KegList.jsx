@@ -58,6 +58,7 @@ export default function KegList() {
     backgroundAttachment: "fixed",
     paddingBottom: "10px"
   };
+
   return (
     <div style={kegListPage}>
       <Header />

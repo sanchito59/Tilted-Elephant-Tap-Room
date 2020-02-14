@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Counters from "./Counters";
 
 class Keg extends Component {
-  render(props) {
+  render() {
     const keg = {
       padding: "16px",
       backgroundColor: "rgba(51, 68, 85, 0.9)",
@@ -54,9 +54,9 @@ class Keg extends Component {
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
     classes +=
-      this.props.price > 5.0
+      this.props.price > 5.48
         ? "warning"
-        : this.props.price > 4.49
+        : this.props.price > 3.79
         ? "primary"
         : "success";
     return classes;
