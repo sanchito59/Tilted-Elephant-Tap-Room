@@ -1,6 +1,9 @@
 // App Functionality
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+// Stylesheets
+import './App.scss';
 import './fonts.css';
 
 // Components
