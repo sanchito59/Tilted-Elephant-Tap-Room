@@ -13,14 +13,14 @@ import AboutUs from './components/AboutUs';
 import Careers from './components/Careers';
 import KegList from './components/KegList';
 import AgeRestriction from './components/AgeRestriction';
-import Underage from './components/Underage';
+import UnderagePage from './components/Underage';
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path='/' component={AgeRestriction} />
-        <Route exact path='/underage' component={Underage} />
+        <Route exact path='/underage' component={UnderagePage} />
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/kegs' component={KegList} />
         <Route exact path='/newkeg' component={NewKegForm} />
