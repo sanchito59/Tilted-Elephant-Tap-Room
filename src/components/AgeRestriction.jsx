@@ -24,6 +24,14 @@ export default function AgeRestriction() {
     backgroundColor: "rgb(204,224,224)"
   };
 
+  const elephantTilt = {
+    webkitTransform: "rotate(15deg)",
+    mozTransform: "rotate(15deg)",
+    msTransform: "rotate(15deg)",
+    oTransform: "rotate(15deg)",
+    transform: "rotate(15deg)"
+  };
+
   const tapRoomNameHeader = {
     fontFamily: "Montserrat Subrayada"
   };
@@ -32,7 +40,7 @@ export default function AgeRestriction() {
     <div style={ageRestrictionPage}>
       <div style={ageVerificationDiv}>
         <img src={kegIcon} alt="elephant icon" />
-        <img src={elephantIcon} alt="elephant icon" />
+        <img style={elephantTilt} src={elephantIcon} alt="elephant icon" />
         <h1 style={tapRoomNameHeader}>Tilted Elephant Tap Room</h1>
         <h1>Are you older than 21 years of age?</h1>
         <Link to="/home">Yes, I am older than 21.</Link> |{" "}

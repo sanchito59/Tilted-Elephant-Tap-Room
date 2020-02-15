@@ -16,11 +16,19 @@ export default function Header() {
     fontFamily: "Montserrat Subrayada"
   };
 
+  const elephantTilt = {
+    webkitTransform: "rotate(15deg)",
+    mozTransform: "rotate(15deg)",
+    msTransform: "rotate(15deg)",
+    oTransform: "rotate(15deg)",
+    transform: "rotate(15deg)"
+  };
+
   return (
     <div style={navLinks}>
       <div>
         <img src={kegIcon} alt="elephant icon" />
-        <img src={elephantIcon} alt="elephant icon" />
+        <img style={elephantTilt} src={elephantIcon} alt="elephant icon" />
       </div>
       <h1 style={tapRoomNameHeader}>Tilted Elephant Tap Room</h1>
       <NavLinks />
