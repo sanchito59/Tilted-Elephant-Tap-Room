@@ -49,7 +49,6 @@
 |(Update/PATCH) User changes the review's author.|'Michael Smith'|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
 |(Delete/DELETE) The user removes a review from a product.|Review for 'Fire System Alarms' is deleted.|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
 |(Delete/DELETE) The user deletes a product.|'Fire System Alarms'|The database and all corresponding pages no longer have the product.| -->
-
  <!-- - - - -->
 
 ### Technologies Used
