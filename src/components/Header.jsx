@@ -1,7 +1,10 @@
 import React from "react";
 
+// Components
 import NavLinks from "./NavLinks";
+import CompanyTitle from "./CompanyTitle";
 
+// Assets
 import elephantIcon from "./../images/elephant.png";
 import kegIcon from "./../images/keg.png";
 
@@ -10,10 +13,6 @@ export default function Header() {
     textAlign: "center",
     paddingTop: "3%",
     backgroundColor: "rgb(204,224,224)"
-  };
-
-  const tapRoomNameHeader = {
-    fontFamily: "Montserrat Subrayada"
   };
 
   const elephantTilt = {
@@ -30,7 +29,7 @@ export default function Header() {
         <img src={kegIcon} alt="elephant icon" />
         <img style={elephantTilt} src={elephantIcon} alt="elephant icon" />
       </div>
-      <h1 style={tapRoomNameHeader}>Tilted Elephant Tap Room</h1>
+      <CompanyTitle />
       <NavLinks />
     </div>
   );
