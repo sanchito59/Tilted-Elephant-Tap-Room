@@ -19,7 +19,7 @@ export default function Underage() {
   return (
     <div style={underagePage}>
       <div style={pageContent}>
-        <h1>Sorry, come back when you are of legal drinking age.</h1>
+        <h1>Sorry, come back when you are of legal drinking age!</h1>
       </div>
     </div>
   );

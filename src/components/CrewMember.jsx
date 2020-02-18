@@ -4,21 +4,23 @@ import PropTypes from "prop-types";
 export default function CrewMember(props) {
   const crewMemberDiv = {
     backgroundColor: "black",
-    width: "100%",
-    padding: "16px",
+    width: "60vw",
+    margin: "0 auto",
+    marginBottom: "16px",
+    padding: "24px",
+    borderRadius: "4px",
     color: "rgb(255, 255, 245)"
   };
 
   var imageStyles = {
-    height: "30vh",
-    float: "left",
+    height: "35vh",
     paddingRight: "5%",
-    marginRight: "32px",
-    border: "1px solid red"
+    marginRight: "32px"
   };
 
   const jobTitle = {
     color: "white",
+    textDecoration: "underline",
     textTransform: "uppercase"
   };
 
