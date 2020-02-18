@@ -9,11 +9,11 @@ import './fonts.css';
 // Components
 import HomePage from './components/HomePage';
 import NewKegForm from './components/NewKegForm';
-import AboutUs from './components/AboutUs';
+import AboutUs from './components/AboutUsPage';
 import Careers from './components/Careers';
 import KegList from './components/KegList';
 import AgeRestriction from './components/AgeRestriction';
-import UnderagePage from './components/Underage';
+import UnderagePage from './components/UnderAge';
 import Error404 from './components/Error404';
 
 function App() {
