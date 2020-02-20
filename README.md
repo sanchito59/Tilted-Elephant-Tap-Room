@@ -1,8 +1,8 @@
-# Tilted Elephant Tap Room
+# [Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)
 
 ## By **Chris Sanchez**
 
-**Tilted Elephant Tap Room** is a website built for employees to manage keg inventory. Users can access the website regularly, with views of tap/keg lists, but no ability to perform authorized CRUD (Create, Read, Update, Delete) actions. The front-end was built was React, JavaScript, HTML5, and CSS3/SASS/SCSS. The website features Routing performed through the `react-router-dom` package. The site features dynamic CSS classes depending on price per pint and number of beers left in each keg.
+**[Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)** is a website built for employees to manage keg inventory. Users can access the website regularly, with views of tap/keg lists, but no ability to perform authorized CRUD (Create, Read, Update, Delete) actions. The front-end was built was React, JavaScript, HTML5, and CSS3/SASS/SCSS. The website features Routing performed through the `react-router-dom` package. The site features dynamic CSS classes depending on price per pint and number of beers left in each keg.
 
 *State is a work in progress feature, the site is mostly static.*
 
@@ -23,11 +23,11 @@
 1. Click [here](https://github.com/sanchito59/Tilted-Elephant-Tap-Room.git) to go to the repository location where you will find the clone/download menu.
 
  2. Navigate to the directory (folder) that contains your browser's downloads.
- 3. Double-click on **Tilted Elephant Tap Room** directory (folder).
+ 3. Double-click on **[Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)** directory (folder).
  4. Open directory contents by extracting/unzipping documents from folder.
  3. Make sure your system has `Node Package Manger (NPM)` installed.
  4. With `NPM` installed, run `npm install` .
- 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** on `localhost:3000` in your default browser.
+ 5. After the app files have been installed/configured, run `npm start` . This will launch **[Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)** on `localhost:3000` in your default browser.
 
 #### Clone:
 
@@ -35,7 +35,7 @@
  2. Once the repository finishes downloading you will need to navigate to it in the terminal/command line.
  3. Make sure your system has `Node Package Manger (NPM)` installed.
  4. With `NPM` installed, run `npm install` .
- 5. After the app files have been installed/configured, run `npm start` . This will launch **Tilted Elephant Tap Room** on `localhost:3000` in your default browser.
+ 5. After the app files have been installed/configured, run `npm start` . This will launch **[Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)** on `localhost:3000` in your default browser.
 
  - - -
 
@@ -64,7 +64,7 @@
 
 ### Support and Contact
 
-If you run into any issues running **Tilted Elephant Tap Room**, please contact **Chris Sanchez**.
+If you run into any issues running **[Tilted Elephant Tap Room](https://modest-ramanujan-ef0efe.netlify.com/#/)**, please contact **Chris Sanchez**.
 
 ### License
 
