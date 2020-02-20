@@ -39,24 +39,12 @@
 
  - - -
 
-<!-- ### Specifications: -->
-
-<!-- |Behavior|Input|Output|
-|---|---|---|
-|(Read/GET)|User is on the homepage.|Homepage displays featured products and navigation to view all products.|
-|(Create/POST) User adds a product to the catalogue of products.|'Vasiva HVAC Comp'|The corresponding pages now have the product added and so does the database. The user is shown a message to inform them of the successful creation.|
-|(Read/GET)|User is on the product page.|Product page displays a list of all products. Included is the ability to create products.|
-|(Update/PATCH) User changes the product.|'Fire System Alarms'|All pages reflect the changes and so does the database.|
-|(Create/POST) User adds a review to the product.|Reviews contain information such as author, review text, and rating.|The product page now has the review added and so does the database. The user is shown a message to inform them of successfully changes.|
-|(Update/PATCH) User changes the review's author.|'Michael Smith'|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
-|(Delete/DELETE) The user removes a review from a product.|Review for 'Fire System Alarms' is deleted.|The product page now reflects the changes and so does the database. The user is shown a message to inform them of successful changes.|
-|(Delete/DELETE) The user deletes a product.|'Fire System Alarms'|The database and all corresponding pages no longer have the product.| -->
- <!-- - - - -->
-
 ### Technologies Used
 
  - React
  - JSX
+ - Webpack
+ - NPM
  - JavaScript ES6
  - HTML5 / CSS3
 
