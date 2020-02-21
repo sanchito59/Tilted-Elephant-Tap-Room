@@ -16,7 +16,7 @@ export default function AboutUs() {
       title: "Brewmaster",
       fullName: "Mike Shanahan",
       bio:
-        "Mike grew up in Southern Colorado, and first starting messing around with home brew kits when he was in high school. His passion grew from there as he fell in love with the science of beer-making. He graduated from Oregon State University with a B.S. in Chemistry and a B.S. in Fermentation Science and has since been continually honing his craft.",
+        "Mike grew up in Southern Colorado, and first starting messing around with home brew kits when he was in high school. His passion grew from there as he fell in love with the science of beer-making. He graduated from Oregon State University with a B.S. in Chemistry and a B.S. in Fermentation Science and has since been continually honing his craft since.",
       image: BrewmasterImage
     },
     {
