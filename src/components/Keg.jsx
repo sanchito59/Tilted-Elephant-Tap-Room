@@ -77,6 +77,25 @@ export default function Keg(props) {
     return classes;
   };
 
+  const kegStatusBackgroundColor = () => {
+    let classes = "bg-";
+    classes +=
+      props.pintsLeftInKeg > 65
+        ? "success"
+        : props.pintsLeftInKeg > 20
+        ? "warning"
+        : "danger";
+    return classes;
+  };
+
+  const kegStatusText = () => {
+    document.addEventListener("DOMContentLoaded", function() {
+      if (props.pintsLeftInKeg < 20) {
+        document.getElementById("kegFillStatusBar").innerHTML = "";
+      }
+    });
+  };
+
   return (
     <div style={keg}>
       <h2>{props.name}</h2>
@@ -85,7 +104,12 @@ export default function Keg(props) {
       </h4>
       <div style={statusBarStyle}>
         <div style={innerStatusBarStyle}>
-          <div style={pintsLeftInKegStyle} id="kegFillStatusBar">
+          <div
+            className={kegStatusText()}
+            className={kegStatusBackgroundColor()}
+            style={pintsLeftInKegStyle}
+            id="kegFillStatusBar"
+          >
             <p style={pintsLeftText}>Pints Left</p>
           </div>
         </div>
