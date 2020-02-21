@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Assets
-import kegIconSvg from "./../images/kegIcon.svg";
-
 export default function Keg(props) {
   // Styles
   const keg = {
@@ -46,14 +43,10 @@ export default function Keg(props) {
 
   const pintsLeftInKegStyle = {
     backgroundColor: "green",
-    width: "150px",
+    width: "150.5px",
     borderRadius: "8px",
     height: `${props.pintsLeftInKeg * 2}` + "px",
     transform: "rotate(180deg)"
-  };
-
-  const pintsLeftText = {
-    color: "black"
   };
 
   // Functionality
