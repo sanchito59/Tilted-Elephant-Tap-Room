@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 export default function Keg(props) {
   // Styles
-  const keg = {
+  const kegDiv = {
     padding: "16px",
+    width: "70%",
     backgroundColor: "rgba(51, 68, 85, 0.9)",
     color: "rgb(255, 255, 245)",
     margin: "20px",
@@ -19,8 +20,12 @@ export default function Keg(props) {
     fontWeight: "bold"
   };
 
-  const description = {
-    width: "60%"
+  const beerDescriptionDiv = {
+    marginTop: "10%"
+  };
+
+  const beerDescriptionText = {
+    // width: "60%"
   };
 
   const hr = {
@@ -82,33 +87,41 @@ export default function Keg(props) {
   };
 
   return (
-    <div style={keg}>
-      <h2>{props.name}</h2>
-      <h4>
-        Made By <span style={brand}>{props.brand}</span>
-      </h4>
-      <div style={statusBarStyle}>
-        <div style={innerStatusBarStyle}>
-          <div
-            className={kegStatusBackgroundColor()}
-            style={pintsLeftInKegStyle}
-            id="kegFillStatusBar"
-          ></div>
+    <div style={kegDiv}>
+      <div className="row">
+        <div className="col col-lg-2">
+          <div style={statusBarStyle}>
+            <div style={innerStatusBarStyle}>
+              <div
+                className={kegStatusBackgroundColor()}
+                style={pintsLeftInKegStyle}
+                id="kegFillStatusBar"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div className="col col-lg-4">
+          <h2>{props.name}</h2>
+          <h4>
+            Made By <span style={brand}>{props.brand}</span>
+          </h4>
+          <h4>${props.price} per pint</h4>
+          <p>
+            <span style={bold}>ABV: </span>
+            {props.alcoholContent}%
+          </p>
+          <p>
+            <span style={bold}>IBU: </span> {props.IBU}
+          </p>
+          <p className={getBadgeClasses()}>{props.pintsLeftInKeg}</p>
+          <button onClick={pintSale} className="btn btn-secondary btn-sm">
+            Sell Pint!
+          </button>
+        </div>
+        <div className="col col-lg-4" style={beerDescriptionDiv}>
+          <p style={beerDescriptionText}>{props.description}</p>
         </div>
       </div>
-      <h4>${props.price} per pint</h4>
-      <p>
-        <span style={bold}>ABV: </span>
-        {props.alcoholContent}%
-      </p>
-      <p>
-        <span style={bold}>IBU: </span> {props.IBU}
-      </p>
-      <p style={description}>{props.description}</p>
-      <p className={getBadgeClasses()}>{props.pintsLeftInKeg}</p>
-      <button onClick={pintSale} className="btn btn-secondary btn-sm">
-        Sell Pint!
-      </button>
       <hr style={hr}></hr>
     </div>
   );
