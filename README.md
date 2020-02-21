@@ -6,7 +6,7 @@
 
 *State is a work in progress feature, the site is mostly static.*
 
-![component tree](public/componentTree.png)
+![component tree](public/componentTree2.jpg)
 
 ![screenshot of age restricted landing page](public/ageRestriction.png)
 
