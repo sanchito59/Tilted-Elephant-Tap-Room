@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// Components
+import PintCountVisual from "./PintCountVisual";
+
+// Assets
+import kegIconSvg from "./../images/kegIcon.svg";
+
 export default function Keg(props) {
   // Styles
   const keg = {
@@ -29,6 +35,37 @@ export default function Keg(props) {
     borderColor: "rgb(255, 255, 255)"
   };
 
+  const kegVisual = {
+    background: 'url("./../images/keg.png")'
+  };
+
+  const statusLayer = {
+    backgroundColor: "rgb(47, 240, 41)",
+    clipPath:
+      "polygon(5% 30%, 11.5% 1%, 100% 0%, 98% 35%, 100% 105%, 100% 100%, 10% 100%, 9.5% 95%)",
+    height: `${props.pintsLeftInKeg}` + "px"
+  };
+
+  const statusBarStyle = {
+    color: "white"
+  };
+
+  const innerStatusBarStyle = {
+    backgroundColor: "white",
+    width: "248px",
+    marginBottom: "12px"
+  };
+
+  const pintsLeftInKegStyle = {
+    backgroundColor: "green",
+    width: `${props.pintsLeftInKeg * 2}` + "px",
+    padding: "4px"
+  };
+
+  const pintsLeftText = {
+    color: "black"
+  };
+
   // Functionality
   const pintSale = () => {
     // For purposes of pre-existing kegs, so the site isn't empty, two functions are used
@@ -51,6 +88,18 @@ export default function Keg(props) {
       <h4>
         Made By <span style={brand}>{props.brand}</span>
       </h4>
+      {/* <div style={kegVisual}>
+        <img style={statusLayer} src={kegIconSvg}></img>
+      </div> */}
+
+      <div style={statusBarStyle}>
+        <div style={innerStatusBarStyle}>
+          <div style={pintsLeftInKegStyle} id="hungerBar">
+            <p style={pintsLeftText}>Pints Left</p>
+          </div>
+        </div>
+      </div>
+
       <h4>${props.price} per pint</h4>
       <p>
         <span style={bold}>ABV: </span>
