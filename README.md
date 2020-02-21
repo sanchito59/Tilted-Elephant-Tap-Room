@@ -2,9 +2,7 @@
 
 ## By **Chris Sanchez**
 
-**[Tilted Elephant Taproom](https://modest-ramanujan-ef0efe.netlify.com/#/)** is a website built for employees to manage keg inventory. Users can access the website regularly, with views of tap/keg lists, but no ability to perform authorized CRUD (Create, Read, Update, Delete) actions. The front-end was built was React, JavaScript, HTML5, and CSS3/SASS/SCSS. The website features Routing performed through the `react-router-dom` package. The site features dynamic CSS classes depending on price per pint and number of beers left in each keg.
-
-*State is a work in progress feature, the site is mostly static.*
+**[Tilted Elephant Taproom](https://modest-ramanujan-ef0efe.netlify.com/#/)** is a website built for employees to manage keg inventory. Users can access the website regularly, with views of tap/keg lists, but no ability to perform authorized CRUD (Create, Read, Update, Delete) actions. The front-end was built with React, JavaScript, HTML5, and CSS3/SASS/SCSS. The website features Routing performed through the `react-router-dom` package. The site features dynamic CSS classes depending on price per pint and number of beers left in each keg.
 
 ![component tree](public/componentTree2.jpg)
 
