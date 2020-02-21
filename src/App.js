@@ -16,21 +16,39 @@ import AgeRestriction from './components/AgeRestriction';
 import UnderagePage from './components/UnderAge';
 import Error404 from './components/Error404';
 
-function App() {
-  return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={AgeRestriction} />
-        <Route exact path='/underage' component={UnderagePage} />
-        <Route exact path='/home' component={HomePage} />
-        <Route exact path='/kegs' component={KegList} />
-        <Route exact path='/newkeg' component={NewKegForm} />
-        <Route exact path='/careers' component={Careers} />
-        <Route exact path='/aboutus' component={AboutUs} />
-        <Route component={Error404} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKegList: []
+    };
+    this.handleNewKegAddition = this.handleNewKegAddition.bind(this);
+  }
+
+  handleNewKegAddition(newKeg) {
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg);
+    this.setState({ masterKegList: newMasterKegList })
+  }
+
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path='/' component={AgeRestriction} />
+          <Route exact path='/underage' component={UnderagePage} />
+          <Route exact path='/home' component={HomePage} />
+          <Route exact path='/kegs' component={KegList} />
+          <Route exact path='/newkeg' render={() => (
+            <NewKegForm onNewKegAddition={this.handleNewKegAddition} />
+          )} />
+          <Route exact path='/careers' component={Careers} />
+          <Route exact path='/aboutus' component={AboutUs} />
+          <Route component={Error404} />
+        </Switch>
+      </div >
+    );
+  }
 }
 
 export default App;
