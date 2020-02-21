@@ -18,7 +18,11 @@ export default function KegList(props) {
     <div style={kegListPage}>
       <Header />
       {props.houseKegList.map(keg => (
-        <Keg {...keg} sellingOfPint={props.updateHousePints} key={keg.id} />
+        <Keg
+          {...keg}
+          sellingOfHousePint={props.updateHousePints}
+          key={keg.id}
+        />
       ))}
       {props.kegList.map(keg => (
         <Keg {...keg} sellingOfPint={props.updatePints} key={keg.id} />
@@ -28,5 +32,6 @@ export default function KegList(props) {
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.array,
+  houseKefList: PropTypes.array
 };

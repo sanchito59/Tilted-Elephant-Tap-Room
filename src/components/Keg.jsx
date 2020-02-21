@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 
 export default function Keg(props) {
   const pintSale = () => {
-    console.log(props);
-    props.sellingOfPint();
+    // For purposes of pre-existing kegs, so the site isn't empty, two functions are used
+    if (props.id === 1 || 2 || 3 || 4 || 5) {
+      props.sellingOfHousePint(props.id);
+    } else {
+      props.sellingOfPint(props.id);
+    }
   };
 
   const keg = {
