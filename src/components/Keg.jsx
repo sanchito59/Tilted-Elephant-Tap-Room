@@ -32,31 +32,24 @@ export default function Keg(props) {
     borderColor: "rgb(255, 255, 255)"
   };
 
-  const kegVisual = {
-    background: 'url("./../images/keg.png")'
-  };
-
-  const statusLayer = {
-    backgroundColor: "rgb(47, 240, 41)",
-    clipPath:
-      "polygon(5% 30%, 11.5% 1%, 100% 0%, 98% 35%, 100% 105%, 100% 100%, 10% 100%, 9.5% 95%)",
-    height: `${props.pintsLeftInKeg}` + "px"
-  };
-
   const statusBarStyle = {
     color: "white"
   };
 
   const innerStatusBarStyle = {
     backgroundColor: "white",
-    width: "248px",
-    marginBottom: "12px"
+    width: "150px",
+    borderRadius: "8px",
+    height: "248px",
+    transform: "rotate(180deg)"
   };
 
   const pintsLeftInKegStyle = {
     backgroundColor: "green",
-    width: `${props.pintsLeftInKeg * 2}` + "px",
-    padding: "4px"
+    width: "150px",
+    borderRadius: "8px",
+    height: `${props.pintsLeftInKeg * 2}` + "px",
+    transform: "rotate(180deg)"
   };
 
   const pintsLeftText = {
@@ -75,7 +68,12 @@ export default function Keg(props) {
 
   const getBadgeClasses = () => {
     let classes = "badge m-2 badge-";
-    classes += props.pintsLeftInKeg === 0 ? "warning" : "primary";
+    classes +=
+      props.pintsLeftInKeg > 65
+        ? "primary"
+        : props.pintsLeftInKeg > 20
+        ? "warning"
+        : "danger";
     return classes;
   };
 
@@ -85,18 +83,13 @@ export default function Keg(props) {
       <h4>
         Made By <span style={brand}>{props.brand}</span>
       </h4>
-      {/* <div style={kegVisual}>
-        <img style={statusLayer} src={kegIconSvg}></img>
-      </div> */}
-
       <div style={statusBarStyle}>
         <div style={innerStatusBarStyle}>
-          <div style={pintsLeftInKegStyle} id="hungerBar">
+          <div style={pintsLeftInKegStyle} id="kegFillStatusBar">
             <p style={pintsLeftText}>Pints Left</p>
           </div>
         </div>
       </div>
-
       <h4>${props.price} per pint</h4>
       <p>
         <span style={bold}>ABV: </span>
