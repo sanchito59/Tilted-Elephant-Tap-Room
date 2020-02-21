@@ -1,66 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import Counters from "./Counters";
+export default function Keg(props) {
+  const pintSale = () => {
+    console.log(props);
+    props.sellingOfPint();
+  };
 
-class Keg extends Component {
-  render() {
-    const keg = {
-      padding: "16px",
-      backgroundColor: "rgba(51, 68, 85, 0.9)",
-      color: "rgb(255, 255, 245)",
-      margin: "20px",
-      borderRadius: "8px"
-    };
+  const keg = {
+    padding: "16px",
+    backgroundColor: "rgba(51, 68, 85, 0.9)",
+    color: "rgb(255, 255, 245)",
+    margin: "20px",
+    borderRadius: "8px"
+  };
 
-    const brand = {
-      fontStyle: "italic"
-    };
+  const brand = {
+    fontStyle: "italic"
+  };
 
-    const bold = {
-      fontWeight: "bold"
-    };
+  const bold = {
+    fontWeight: "bold"
+  };
 
-    const description = {
-      width: "60%"
-    };
+  const description = {
+    width: "60%"
+  };
 
-    const hr = {
-      marginTop: "12px",
-      width: "75%",
-      borderColor: "rgb(255, 255, 255)"
-    };
-    return (
-      <div style={keg}>
-        <h2>{this.props.name}</h2>
-        <h4>
-          Made By <span style={brand}>{this.props.brand}</span>
-        </h4>
-        <h4 className={this.getBadgeClasses()}>${this.props.price} per pint</h4>
-        <p>
-          <span style={bold}>ABV: </span>
-          {this.props.alcoholContent}%
-        </p>
-        <p>
-          <span style={bold}>IBU: </span> {this.props.IBU}
-        </p>
-        <p style={description}>{this.props.description}</p>
-        <Counters />
-        <hr style={hr}></hr>
-      </div>
-    );
-  }
+  const hr = {
+    marginTop: "12px",
+    width: "75%",
+    borderColor: "rgb(255, 255, 255)"
+  };
 
-  getBadgeClasses() {
-    let classes = "badge m-2 badge-";
-    classes +=
-      this.props.price > 5.48
-        ? "warning"
-        : this.props.price > 3.79
-        ? "primary"
-        : "success";
-    return classes;
-  }
+  return (
+    <div style={keg}>
+      <h2>{props.name}</h2>
+      <h4>
+        Made By <span style={brand}>{props.brand}</span>
+      </h4>
+      <h4>${props.price} per pint</h4>
+      <p>
+        <span style={bold}>ABV: </span>
+        {props.alcoholContent}%
+      </p>
+      <p>
+        <span style={bold}>IBU: </span> {props.IBU}
+      </p>
+      <p style={description}>{props.description}</p>
+      <p style={hr}>{props.pintsLeftInKeg}</p>
+      <button onClick={pintSale} className="btn btn-secondary btn-sm">
+        Sell Pint!
+      </button>
+      <hr style={hr}></hr>
+    </div>
+  );
 }
 
 Keg.propTypes = {
@@ -71,5 +65,3 @@ Keg.propTypes = {
   IBU: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };
-
-export default Keg;

@@ -20,15 +20,90 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: []
+      masterKegList: [],
+      availableKegs: [
+        {
+          name: "African Amber",
+          brand: "Mac & Jack's",
+          price: "5.49",
+          alcoholContent: "6.7",
+          IBU: "30",
+          description:
+            "This beer erupts with a floral, hoppy taste, followed by a well rounded malty middle, finishing with a nicely organic hop flavor.",
+          pintsLeftInKeg: 124,
+          id: 1
+        },
+        {
+          name: "Montucky Cold Snack",
+          brand: "Montucky Cold Snacks",
+          price: "2.79",
+          alcoholContent: "4.1",
+          IBU: "n/a",
+          description:
+            "Refreshing light beer for pow pow rippers, pony riders, gator wranglers, and badass do-gooders.",
+          pintsLeftInKeg: 124,
+          id: 2
+        },
+        {
+          name: "Ruby",
+          brand: "McMenamins",
+          price: "4.50",
+          alcoholContent: "4.13",
+          IBU: "5",
+          description:
+            "An ale that's light, crisp and refreshingly fruity. Great Western Premium 2-Row and 42 pounds of Oregon-grown raspberry puree is used to craft every colorful batch.",
+          pintsLeftInKeg: 124,
+          id: 3
+
+        },
+        {
+          name: "Oatmeal Stout",
+          brand: "Oakshire",
+          price: "6.00",
+          alcoholContent: "6.5",
+          IBU: "40",
+          description:
+            "A dark beer brewed with oatmeal to give a slightly nutty flavor, with finishing notes of dark chocolate and espresso beans.",
+          pintsLeftInKeg: 124,
+          id: 4
+        },
+        {
+          name: "Blue Ribbon",
+          brand: "Pabst",
+          price: "3.00",
+          alcoholContent: "4.6",
+          IBU: "10",
+          description:
+            "Sticky dive bars and ragers can attest- the cool, refreshing taste of a Pabst Blue Ribbon is seldom matched.",
+          pintsLeftInKeg: 124,
+          id: 5
+        }
+      ]
     };
     this.handleNewKegAddition = this.handleNewKegAddition.bind(this);
+    this.sellPint = this.sellPint.bind(this);
   }
 
   handleNewKegAddition(newKeg) {
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({ masterKegList: newMasterKegList })
+  }
+
+  sellPint() {
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.forEach(function (keg) {
+      keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+    })
+    this.setState({ masterKegList: newMasterKegList })
+  }
+
+  sellHousePints() {
+    let newAvailableKegList = this.state.availableKegs.slice();
+    newAvailableKegList.forEach(function (keg) {
+      keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+    })
+    this.setState({ availableKegList: newAvailableKegList })
   }
 
   render() {
@@ -38,7 +113,13 @@ class App extends React.Component {
           <Route exact path='/' component={AgeRestriction} />
           <Route exact path='/underage' component={UnderagePage} />
           <Route exact path='/home' component={HomePage} />
-          <Route exact path='/kegs' render={() => <KegList kegList={this.state.masterKegList} />} />
+          <Route exact path='/kegs' render={() =>
+            <KegList
+              houseKegList={this.state.availableKegs}
+              kegList={this.state.masterKegList}
+              updateHousePints={this.sellHousePints}
+              updatePints={this.sellPint} />
+          } />
           <Route exact path='/newkeg' render={() =>
             <NewKegForm onNewKegAddition={this.handleNewKegAddition} />
           } />
