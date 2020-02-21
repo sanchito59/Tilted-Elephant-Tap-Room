@@ -38,10 +38,10 @@ class App extends React.Component {
           <Route exact path='/' component={AgeRestriction} />
           <Route exact path='/underage' component={UnderagePage} />
           <Route exact path='/home' component={HomePage} />
-          <Route exact path='/kegs' component={KegList} />
-          <Route exact path='/newkeg' render={() => (
+          <Route exact path='/kegs' render={() => <KegList kegList={this.state.masterKegList} />} />
+          <Route exact path='/newkeg' render={() =>
             <NewKegForm onNewKegAddition={this.handleNewKegAddition} />
-          )} />
+          } />
           <Route exact path='/careers' component={Careers} />
           <Route exact path='/aboutus' component={AboutUs} />
           <Route component={Error404} />

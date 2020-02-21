@@ -1,8 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+// Components
 import Header from "./Header";
 import Keg from "./Keg";
 
-export default function KegList() {
+export default function KegList(props) {
   const availableKegs = [
     {
       name: "African Amber",
@@ -71,6 +74,17 @@ export default function KegList() {
           IBU={keg.IBU}
           description={keg.description}
           key={index}
+        />
+      ))}
+      {props.kegList.map(keg => (
+        <Keg
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholContent={keg.alcoholContent}
+          IBU={keg.IBU}
+          description={keg.description}
+          key={keg.id}
         />
       ))}
     </div>
