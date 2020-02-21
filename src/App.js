@@ -30,19 +30,19 @@ class App extends React.Component {
           IBU: "30",
           description:
             "This beer erupts with a floral, hoppy taste, followed by a well rounded malty middle, finishing with a nicely organic hop flavor.",
-          pintsLeftInKeg: 0,
+          pintsLeftInKeg: 99,
           id: 1
         },
         {
-          name: "Montucky Cold Snack",
-          brand: "Montucky Cold Snacks",
-          price: "2.79",
-          alcoholContent: "4.1",
-          IBU: "n/a",
+          name: "Oatmeal Stout",
+          brand: "Oakshire",
+          price: "6.00",
+          alcoholContent: "6.5",
+          IBU: "40",
           description:
-            "Refreshing light beer for pow pow rippers, pony riders, gator wranglers, and badass do-gooders.",
-          pintsLeftInKeg: 36,
-          id: 2
+            "A dark beer brewed with oatmeal to give a slightly nutty flavor, with finishing notes of dark chocolate and espresso beans.",
+          pintsLeftInKeg: 44,
+          id: 4
         },
         {
           name: "Ruby",
@@ -57,17 +57,6 @@ class App extends React.Component {
 
         },
         {
-          name: "Oatmeal Stout",
-          brand: "Oakshire",
-          price: "6.00",
-          alcoholContent: "6.5",
-          IBU: "40",
-          description:
-            "A dark beer brewed with oatmeal to give a slightly nutty flavor, with finishing notes of dark chocolate and espresso beans.",
-          pintsLeftInKeg: 44,
-          id: 4
-        },
-        {
           name: "Blue Ribbon",
           brand: "Pabst",
           price: "3.00",
@@ -77,6 +66,17 @@ class App extends React.Component {
             "Sticky dive bars and ragers can attest- the cool, refreshing taste of a Pabst Blue Ribbon is seldom matched.",
           pintsLeftInKeg: 87,
           id: 5
+        },
+        {
+          name: "Montucky Cold Snack",
+          brand: "Montucky Cold Snacks",
+          price: "2.79",
+          alcoholContent: "4.1",
+          IBU: "n/a",
+          description:
+            "Refreshing light beer for pow pow rippers, pony riders, gator wranglers, and badass do-gooders.",
+          pintsLeftInKeg: 36,
+          id: 2
         }
       ]
     };
