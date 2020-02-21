@@ -32,6 +32,7 @@ export default function NewKegForm(props) {
   let _alcoholContent = null;
   let _IBU = null;
   let _description = null;
+  let _pintsLeftInKeg = 124;
 
   function handleNewKegFormSubmission(e) {
     console.log(props);
@@ -45,7 +46,8 @@ export default function NewKegForm(props) {
       brand: _brand.value,
       alcoholContent: _alcoholContent.value,
       IBU: _IBU.value,
-      _description: _description.value,
+      description: _description.value,
+      pintsLeftInKeg: _pintsLeftInKeg,
       id: v4()
     });
     _name = "";
