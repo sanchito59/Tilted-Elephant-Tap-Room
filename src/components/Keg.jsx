@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Components
-import PintCountVisual from "./PintCountVisual";
-
 // Assets
 import kegIconSvg from "./../images/kegIcon.svg";
 
