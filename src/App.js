@@ -92,7 +92,6 @@ class App extends React.Component {
   }
 
   sellPint(id) {
-    console.log('selling general pint');
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach(function (keg) {
       if (keg.id == id) {
@@ -105,7 +104,6 @@ class App extends React.Component {
   }
 
   sellHousePint(id) {
-    console.log('selling house pint');
     let newAvailableKegList = this.state.availableKegs.slice();
     newAvailableKegList.forEach(function (keg) {
       if (keg.id == id) {
