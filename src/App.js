@@ -7,6 +7,7 @@ import './App.scss';
 import './fonts.css';
 
 // Components
+import Admin from './components/Admin';
 import HomePage from './components/HomePage';
 import NewKegForm from './components/NewKegForm';
 import AboutUs from './components/AboutUsPage';
@@ -21,7 +22,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterKegList: [],
-      availableKegs: [
+      houseKegList: [
         {
           name: "African Amber",
           brand: "Mac & Jack's",
@@ -104,27 +105,32 @@ class App extends React.Component {
   }
 
   sellHousePint(id) {
-    let newAvailableKegList = this.state.availableKegs.slice();
-    newAvailableKegList.forEach(function (keg) {
+    let newHouseKegList = this.state.houseKegs.slice();
+    newHouseKegList.forEach(function (keg) {
       if (keg.id == id) {
         keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
       } else {
         return false;
       }
     })
-    this.setState({ availableKegList: newAvailableKegList })
+    this.setState({ houseKegList: newHouseKegList })
   }
 
   render() {
     return (
       <div>
         <Switch>
+          <Route path='/admin' render={() =>
+            <Admin
+              kegList={this.state.masterKegList}
+              houseKegList={this.state.houseKegs} />
+          } />
           <Route exact path='/' component={AgeRestriction} />
           <Route exact path='/underage' component={UnderagePage} />
           <Route exact path='/home' component={HomePage} />
           <Route exact path='/kegs' render={() =>
             <KegList
-              houseKegList={this.state.availableKegs}
+              houseKegList={this.state.houseKegList}
               kegList={this.state.masterKegList}
               updateHousePints={this.sellHousePint}
               updatePints={this.sellPint} />
