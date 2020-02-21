@@ -35,11 +35,6 @@ export default function NewKegForm(props) {
   let _pintsLeftInKeg = 124;
 
   function handleNewKegFormSubmission(e) {
-    console.log(props);
-    console.log(_name.value);
-    console.log(_alcoholContent.value);
-    console.log(_brand.value);
-
     e.preventDefault();
     props.onNewKegAddition({
       name: _name.value,
