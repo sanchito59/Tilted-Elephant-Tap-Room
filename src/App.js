@@ -30,7 +30,7 @@ class App extends React.Component {
           IBU: "30",
           description:
             "This beer erupts with a floral, hoppy taste, followed by a well rounded malty middle, finishing with a nicely organic hop flavor.",
-          pintsLeftInKeg: 124,
+          pintsLeftInKeg: 0,
           id: 1
         },
         {
@@ -41,7 +41,7 @@ class App extends React.Component {
           IBU: "n/a",
           description:
             "Refreshing light beer for pow pow rippers, pony riders, gator wranglers, and badass do-gooders.",
-          pintsLeftInKeg: 124,
+          pintsLeftInKeg: 36,
           id: 2
         },
         {
@@ -52,7 +52,7 @@ class App extends React.Component {
           IBU: "5",
           description:
             "An ale that's light, crisp and refreshingly fruity. Great Western Premium 2-Row and 42 pounds of Oregon-grown raspberry puree is used to craft every colorful batch.",
-          pintsLeftInKeg: 124,
+          pintsLeftInKeg: 119,
           id: 3
 
         },
@@ -64,7 +64,7 @@ class App extends React.Component {
           IBU: "40",
           description:
             "A dark beer brewed with oatmeal to give a slightly nutty flavor, with finishing notes of dark chocolate and espresso beans.",
-          pintsLeftInKeg: 124,
+          pintsLeftInKeg: 44,
           id: 4
         },
         {
@@ -75,13 +75,14 @@ class App extends React.Component {
           IBU: "10",
           description:
             "Sticky dive bars and ragers can attest- the cool, refreshing taste of a Pabst Blue Ribbon is seldom matched.",
-          pintsLeftInKeg: 124,
+          pintsLeftInKeg: 87,
           id: 5
         }
       ]
     };
     this.handleNewKegAddition = this.handleNewKegAddition.bind(this);
     this.sellPint = this.sellPint.bind(this);
+    this.sellHousePint = this.sellHousePint.bind(this);
   }
 
   handleNewKegAddition(newKeg) {
@@ -90,21 +91,27 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList })
   }
 
-  sellPint() {
+  sellPint(id) {
+    console.log(this.state);
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach(function (keg) {
-      keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+      if (keg.id == id) {
+        keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+      }
     })
     this.setState({ masterKegList: newMasterKegList })
   }
 
-  sellHousePints() {
+  sellHousePint(id) {
     let newAvailableKegList = this.state.availableKegs.slice();
     newAvailableKegList.forEach(function (keg) {
-      keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+      if (keg.id == id) {
+        keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
+      }
     })
     this.setState({ availableKegList: newAvailableKegList })
   }
+
 
   render() {
     return (
@@ -117,7 +124,7 @@ class App extends React.Component {
             <KegList
               houseKegList={this.state.availableKegs}
               kegList={this.state.masterKegList}
-              updateHousePints={this.sellHousePints}
+              updateHousePints={this.sellHousePint}
               updatePints={this.sellPint} />
           } />
           <Route exact path='/newkeg' render={() =>
