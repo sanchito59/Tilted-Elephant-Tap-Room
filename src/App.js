@@ -21,7 +21,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: [],
       houseKegList: [
         {
           name: "African Amber",
@@ -82,30 +81,17 @@ class App extends React.Component {
       ]
     };
     this.handleNewKegAddition = this.handleNewKegAddition.bind(this);
-    this.sellPint = this.sellPint.bind(this);
     this.sellHousePint = this.sellHousePint.bind(this);
   }
 
   handleNewKegAddition(newKeg) {
-    let newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKeg);
-    this.setState({ masterKegList: newMasterKegList })
-  }
-
-  sellPint(id) {
-    let newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.forEach(function (keg) {
-      if (keg.id == id) {
-        keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
-      } else {
-        return false;
-      }
-    })
-    this.setState({ masterKegList: newMasterKegList })
+    let newHouseKegList = this.state.houseKegList.slice();
+    newHouseKegList.push(newKeg);
+    this.setState({ houseKegList: newHouseKegList })
   }
 
   sellHousePint(id) {
-    let newHouseKegList = this.state.houseKegs.slice();
+    let newHouseKegList = this.state.houseKegList.slice();
     newHouseKegList.forEach(function (keg) {
       if (keg.id == id) {
         keg.formattedPintNumber = keg.pintsLeftInKeg -= 1;
@@ -122,8 +108,7 @@ class App extends React.Component {
         <Switch>
           <Route path='/admin' render={() =>
             <Admin
-              kegList={this.state.masterKegList}
-              houseKegList={this.state.houseKegs} />
+              houseKegList={this.state.houseKegList} />
           } />
           <Route exact path='/' component={AgeRestriction} />
           <Route exact path='/underage' component={UnderagePage} />
@@ -131,7 +116,6 @@ class App extends React.Component {
           <Route exact path='/kegs' render={() =>
             <KegList
               houseKegList={this.state.houseKegList}
-              kegList={this.state.masterKegList}
               updateHousePints={this.sellHousePint}
               updatePints={this.sellPint} />
           } />
