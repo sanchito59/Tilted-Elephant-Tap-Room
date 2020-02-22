@@ -2,18 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
-// Components
-import Header from "./Header";
-
-export default function NewKegForm(props) {
+export default function EditKeg(props) {
   // Style
-  const newKegFormPage = {
-    backgroundImage:
-      "url(https://images.unsplash.com/photo-1559526642-c3f001ea68ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80)",
-    backgroundRepeat: "no-repeat",
-    height: "105vh",
-    backgroundAttachment: "fixed",
-    paddingBottom: "100px"
+  const editKegForm = {
+    backgroundColor: "slategrey",
+    padding: "16px"
   };
 
   const formStyle = {
@@ -34,8 +27,9 @@ export default function NewKegForm(props) {
   let _description = null;
   let _pintsLeftInKeg = 124;
 
-  function handleNewKegFormSubmission(e) {
+  function handleEditKegSubmission(e) {
     e.preventDefault();
+    // Line 33 function needs to change
     props.onNewKegAddition({
       name: _name.value,
       brand: _brand.value,
@@ -53,10 +47,10 @@ export default function NewKegForm(props) {
   }
 
   return (
-    <div style={newKegFormPage}>
-      <Header />
+    <div style={editKegForm}>
+      <h2>Edit -keg name-</h2>
       <div style={formStyle}>
-        <form onSubmit={handleNewKegFormSubmission}>
+        <form onSubmit={handleEditKegSubmission}>
           <div className="form-group">
             <input
               type="text"
@@ -119,6 +113,6 @@ export default function NewKegForm(props) {
   );
 }
 
-NewKegForm.propTypes = {
+EditKeg.propTypes = {
   onNewKegAddition: PropTypes.func
 };
