@@ -24,9 +24,6 @@ export default function KegList(props) {
           key={keg.id}
         />
       ))}
-      {props.kegList.map(keg => (
-        <Keg {...keg} sellingOfPint={props.updatePints} key={keg.id} />
-      ))}
     </div>
   );
 }

@@ -5,8 +5,8 @@ import KegList from "./KegList";
 function Admin(props) {
   return (
     <div>
-      <h2>Admin</h2>
-      <KegList houseKegList={props.availableKegs} kegList={props.kegList} />
+      <h2>Admin Portal</h2>
+      <KegList houseKegList={props.houseKegList} />
     </div>
   );
 }

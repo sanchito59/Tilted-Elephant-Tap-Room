@@ -56,12 +56,7 @@ export default function Keg(props) {
 
   // Functionality
   const pintSale = () => {
-    // For purposes of pre-existing kegs, so the site isn't empty, two functions are used
-    if (typeof props.id != "string") {
-      props.sellingOfHousePint(props.id);
-    } else {
-      props.sellingOfPint(props.id);
-    }
+    props.sellingOfHousePint(props.id);
   };
 
   const getBadgeClasses = () => {
