@@ -106,9 +106,9 @@ class App extends React.Component {
     return (
       <div>
         <Switch>
-          <Route path='/admin' render={() =>
+          <Route path='/admin' render={(props) =>
             <Admin
-              houseKegList={this.state.houseKegList} />
+              houseKegList={this.state.houseKegList} currentRouterPath={props.location.pathname} />
           } />
           <Route exact path='/' component={AgeRestriction} />
           <Route exact path='/underage' component={UnderagePage} />
