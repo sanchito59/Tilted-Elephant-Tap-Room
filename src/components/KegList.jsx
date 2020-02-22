@@ -21,6 +21,7 @@ export default function KegList(props) {
         <Keg
           {...keg}
           sellingOfHousePint={props.updateHousePints}
+          currentRouterPath={props.currentRouterPath}
           key={keg.id}
         />
       ))}
@@ -30,5 +31,6 @@ export default function KegList(props) {
 
 KegList.propTypes = {
   kegList: PropTypes.array,
-  houseKefList: PropTypes.array
+  houseKefList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };

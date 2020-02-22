@@ -81,7 +81,7 @@ export default function Keg(props) {
     return classes;
   };
 
-  return (
+  const kegInformation = (
     <div style={kegDiv}>
       <div className="row">
         <div className="col col-lg-2">
@@ -120,6 +120,19 @@ export default function Keg(props) {
       <hr style={hr}></hr>
     </div>
   );
+  if (props.currentRouterPath === "/admin") {
+    return (
+      <div
+        onClick={() => {
+          alert("hey, you just clicked the " + props.name + " keg");
+        }}
+      >
+        {kegInformation}
+      </div>
+    );
+  } else {
+    return <div>{kegInformation}</div>;
+  }
 }
 
 Keg.propTypes = {
@@ -128,5 +141,6 @@ Keg.propTypes = {
   price: PropTypes.string.isRequired,
   alcoholContent: PropTypes.string.isRequired,
   IBU: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string
 };
